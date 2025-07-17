@@ -1,16 +1,16 @@
 <template>
-    <div class="overlay" @click="$emit('cancel')">
-        <div class="overlay-popup" @click.stop>
+    <div class="overlay" @mousedown="$emit('cancel')">
+        <form class="overlay-popup" @mousedown.stop @submit.prevent="submit">
             <div class="overlay-popup-title">Edit</div>
             <div class="overlay-popup-subtitle">Edit your todo</div>
             <div class="overlay-popup-input">
-                <text-input-normal v-model="inputValue" />
+                <text-input-normal v-model="inputValue"/>
             </div>
             <div class="overlay-popup-buttons">
-                <button-normal label="Cancel" @click="$emit('cancel')" />
-                <button-normal label="Done" @click="submit" />
+                <button-normal label="Cancel" @click="$emit('cancel')" type="button"/>
+                <button-normal label="Done" type="submit" />
             </div>
-        </div>
+        </form>
     </div>
 </template>
 
@@ -27,7 +27,6 @@ const inputValue = ref(props.value);
 function submit() {
     emit('submit', inputValue.value);
 }
-
 </script>
 
 <style lang="scss">
@@ -75,5 +74,14 @@ function submit() {
             gap: 0.5rem;
         }
     }
+}
+@media (max-width: 480px) {
+.overlay{
+    &-popup{
+        padding: 1;
+        min-width: 0;
+        width: calc(100vw - 3rem);
+    }
+}
 }
 </style>

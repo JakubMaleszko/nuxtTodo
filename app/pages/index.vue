@@ -124,27 +124,51 @@ async function handleTodoEdit(newTitle: string) {
     }
 }
 
+@media (max-width: 991.98px) {
+    .container {
+        padding: 2rem 0;
+
+        &-todos {
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+        .container {
+        padding: 1rem 0;
+
+        &-todos {
+            width: 95%;
+        }
+    }
+}
+
+
 .popup {
     &-title {
         font-size: 44px;
         text-align: center;
     }
 }
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
+
 .fade-enter-from {
-  opacity: 0;
+    opacity: 0;
 }
+
 .fade-enter-to {
-  opacity: 1;
+    opacity: 1;
 }
 
 .fade-leave-from {
-  opacity: 1;
+    opacity: 1;
 }
+
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 </style>

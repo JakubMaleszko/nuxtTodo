@@ -115,4 +115,64 @@ const emit = defineEmits(['edit', 'delete', 'checkboxChange'])
         color: #FF3131;
     }
 }
+
+@media (max-width: 991.98px) {
+    .todo {
+        &-title {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .todoButton {
+        height: 2.0rem;
+        padding: 0 0.5rem;
+        border-radius: 3rem;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+    }
+
+    .todo {
+        &-title {
+            font-size: 20px;
+        }
+
+        &-checkboxWrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-family: sans-serif;
+            color: #fff;
+            user-select: none;
+
+            &-checkbox {
+                display: none;
+            }
+
+            .todo-checkboxWrapper-checkmark {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #fff;
+                &::after {
+                content: "";
+                position: absolute;
+                left: 6px;
+                top: 3px;
+                width: 6px;
+                height: 12px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg) scale(0);
+                transition: transform 0.2s ease;
+            }
+                
+            }
+        }
+    }
+}
 </style>

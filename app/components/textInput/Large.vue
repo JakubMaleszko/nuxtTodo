@@ -29,4 +29,10 @@ const handleInput = (event: Event) => {
     padding: 1rem;
 
 }
+@media (max-width: 991.98px) {
+  .txtInput {
+    width: calc(80% - 3rem);
+    
+  }
+}
 </style>
