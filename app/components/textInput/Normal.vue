@@ -17,15 +17,15 @@ const handleInput = (event: Event) => {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .txtInput {
-    width: 50%;
-    height: 1.5rem;
+    width: calc(100% - 3rem);
+    height: 1rem;
     background-color: #0b0a0b;
     color: white;
     border: 1px solid rgba(203, 203, 203, 0.7);
     border-radius: 2rem;
-    font-size: 20px;
+    font-size: 18px;
     padding: 1rem;
 
 }

@@ -6,5 +6,11 @@ export default defineEventHandler(async (event) => {
         title: body.title,
         completed: false
     });
+    try {
     await todo.save();
+    return;
+    }
+    catch {
+        throw createError({ statusCode: 500, message: 'Error creating todo' });
+    }
 });

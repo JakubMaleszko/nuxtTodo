@@ -20,7 +20,7 @@ defineProps({
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     border: none;
     transition: 0.2s;
 }

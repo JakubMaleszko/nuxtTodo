@@ -19,6 +19,7 @@ yarn install
 # bun
 bun install
 ```
+##### Make sure to set MONGODB_URI in enviroment variables or .env file
 
 ## Development Server
 

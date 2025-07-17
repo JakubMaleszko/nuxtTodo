@@ -16,6 +16,12 @@ import { NuxtLayout } from '#components';
     font-weight: 400;
     font-style: normal;
   }
+    @font-face {
+    font-family: Geist;
+    src: url('/fonts/Geist-VariableFont_wght.ttf');
+    font-weight: 700;
+    font-style: bold;
+  }
 
   body{
     background-color: #000;
